@@ -1,20 +1,22 @@
 NAME = fixed
-SRC = main.cpp Fixed.cpp
-OBJS = $(patsubst $(SRC), $(OBJ_DIR)/%.o, $(SRC))
-FLAGS = c++ -Wall -Wextra -Werror -std=c++98
-OBJ_DIR = obj
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)
+SRCS = main.cpp Fixed.cpp
+OBJS = $(patsubst %.cpp, obj/%.o, $(SRCS))
 
-$(NAME): $(OBJS)
-	$(FLAGS) $(OBJS) -o $(NAME)
+all : obj $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC)
-	@mkdir "obj"
-	@$(FLAGS) -o $@ -c $<
+obj :
+	mkdir -p obj
+
+$(NAME) : $(OBJS) $(SRCS)
+	c++ $(CFLAGS) $(OBJS) -o $(NAME)
+
+obj/%.o : %.cpp
+	c++ $(FLAGS) -c $< -o $@
 
 clean :
-	rm -f $(OBJS)
+	rm -rf obj
 
 fclean : clean
 	rm -f $(NAME)
