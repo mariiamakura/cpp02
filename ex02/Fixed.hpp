@@ -6,7 +6,7 @@
 /*   By: mparasku <mparasku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:35:56 by mparasku          #+#    #+#             */
-/*   Updated: 2023/09/12 16:35:57 by mparasku         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:45:34 by mparasku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ class Fixed {
         bool operator!=(Fixed fixed) const;
 
         //arithmetic operators
-        float operator+(Fixed fixed) const;
-        float operator-(Fixed fixed) const;
-        float operator*(Fixed fixed) const;
-        float operator/(Fixed fixed) const;
+        Fixed operator+(Fixed fixed) const;
+        Fixed operator-(Fixed fixed) const;
+        Fixed operator*(Fixed fixed) const;
+        Fixed operator/(Fixed fixed) const;
 
         //pre-increment (++i -> i+1, i = i)
         //The prefix form returns the value after the increment or decerement was performed.

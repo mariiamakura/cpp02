@@ -6,7 +6,7 @@
 /*   By: mparasku <mparasku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:35:59 by mparasku          #+#    #+#             */
-/*   Updated: 2023/09/12 16:36:00 by mparasku         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:47:31 by mparasku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int main( void ) {
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
 
+	std::cout << b + b + b << std::endl;
+	
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
 

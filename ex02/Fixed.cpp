@@ -6,7 +6,7 @@
 /*   By: mparasku <mparasku@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:35:54 by mparasku          #+#    #+#             */
-/*   Updated: 2023/09/12 16:35:55 by mparasku         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:45:28 by mparasku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,19 +100,19 @@ bool Fixed::operator!=(Fixed fixed) const {
 }
 
 //arithmetic operators
-float Fixed::operator+(Fixed fixed) const {
+Fixed Fixed::operator+(Fixed fixed) const {
     return (this->toFloat() + fixed.toFloat());
 }
 
-float Fixed::operator-(Fixed fixed) const {
+Fixed Fixed::operator-(Fixed fixed) const {
     return (this->toFloat() - fixed.toFloat());
 }
 
-float Fixed::operator*(Fixed fixed) const {
+Fixed Fixed::operator*(Fixed fixed) const {
     return (this->toFloat() * fixed.toFloat());
 }
 
-float Fixed::operator/(Fixed fixed) const {
+Fixed Fixed::operator/(Fixed fixed) const {
     return (this->toFloat() / fixed.toFloat());
 }
 
